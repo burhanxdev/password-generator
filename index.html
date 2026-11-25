@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!--    Google Fonts (Poppins)  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--    Font Awesome    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+      integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="password-generator">
+      <h1 class="title">Password Generator</h1>
+
+      <div class="password-output">
+        <p class="password-result">Your password will appear here (max 50 characters).</p>
+        <button class="copy-button">
+          <i class="fa-regular fa-copy"></i>
+        </button>
+      </div>
+
+      <div class="password-settings">
+        <div class="password-length">
+          <label for="password-length" class="setting-label">Password Length</label>
+          <input
+            type="range"
+            id="password-length"
+            value="15"
+            min="0"
+            max="50"
+            class="length-slider"
+          />
+          <span class="length-value">12</span>
+        </div>
+        <div class="settings-option">
+          <label class="setting-label" for="uppercase">Include Uppercase Letters</label>
+          <input type="checkbox" id="uppercase" />
+        </div>
+        <div class="settings-option">
+          <label class="setting-label" for="lowercase">Include Lowercase Letters</label>
+          <input type="checkbox" id="lowercase" />
+        </div>
+        <div class="settings-option">
+          <label class="setting-label" for="numbers">Include Numbers</label>
+          <input type="checkbox" id="numbers" />
+        </div>
+        <div class="settings-option">
+          <label class="setting-label" for="symbols">Include Symbols</label>
+          <input type="checkbox" id="symbols" />
+        </div>
+      </div>
+
+      <button class="generate-password-btn">
+        <i class="fa-solid fa-key"></i>Generate Password
+      </button>
+
+      <div class="copy-notification">
+        <p>
+          <i class="fa-solid fa-circle-check"></i>Copied successfully! <br /><br />
+          Your password has been copied to the clipboard.
+        </p>
+      </div>
+
+      <div class="password-strength">
+        <div class="strength-info">
+          <p class="strength-title">Password Strength:</p>
+          <p class="strength-label"></p>
+        </div>
+        <div class="strength-meter">
+          <div class="strength-bar"></div>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
